@@ -73,7 +73,7 @@ const Slide5ke2 = () => {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
         <h2 className="text-lg md:text-2xl font-bold text-gray-100 mt-0 text-justify">
-          Peran Mangrove dalam Abrasi Pesisir
+          Peran Hutan dan Mangrove dalam Abrasi Pesisir
         </h2>
 
         <div className="mt-4 mr-20">

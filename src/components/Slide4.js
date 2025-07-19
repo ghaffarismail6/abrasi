@@ -58,14 +58,15 @@ const Slide4 = () => {
       >
         {/* Judul di samping gambar peta */}
         <motion.h2
-          className="text-4xl md:text-5xl text-blue-800 font-extrabold text-blue mr-6 bg-white bg-opacity-50 p-4 hover:animate-wobble"
+          className="text-2xl md:text-4xl text-blue-800 font-extrabold text-blue mr-6 bg-white bg-opacity-50 p-4 hover:animate-wobble"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           variants={variants}
         >
-          Peta Sebaran Abrasi Panaitan
+          Peta Sebaran Variabel
+          2018 & 2023
         </motion.h2>
 
         {/* Gambar Peta */}
@@ -84,11 +85,15 @@ const Slide4 = () => {
             value={selectedMap}
             onChange={handleMapChange}
           >
-            <option value="/img/petacoastline.png">Peta Sebaran Abrasi</option>
-            <option value="/img/petamvi.png">Peta Sebaran Mangrove (MVI)</option>
-            <option value="/img/petandvi.png">Peta Sebaran Vegetasi (NDVI)</option>
-            <option value="/img/petalswi.png">Peta Sebaran Kondisi Tanah (LSWI)</option>
-            <option value="/img/petatci.png">Peta Sebaran Suhu (TCI)</option>
+            <option value="/img/abrasi.png">Peta Sebaran Abrasi</option>
+            <option value="/img/ndvi_2018.png">Peta Sebaran Vegetasi (NDVI) 2018</option>
+            <option value="/img/ndvi_2023.png">Peta Sebaran Vegetasi (NDVI) 2023</option>
+            <option value="/img/mvi_2018.png">Peta Sebaran Mangrove (MVI) 2018</option>
+            <option value="/img/mvi_2023.png">Peta Sebaran Mangrove (MVI) 2023</option>
+            <option value="/img/lswi_2018.png">Peta Sebaran Kondisi Tanah (LSWI) 2018</option>
+            <option value="/img/lswi_2023.png">Peta Sebaran Kondisi Tanah (LSWI) 2023</option>
+            <option value="/img/tci_2018.png">Peta Sebaran Suhu (TCI) 2018</option>
+            <option value="/img/tci_2023.png">Peta Sebaran Suhu (TCI) 2023</option>
           </select>
         </div>
       </motion.div>
@@ -105,7 +110,12 @@ const Slide4 = () => {
       >
         <div className="flex items-center justify-center flex-col border border-gray-300 rounded-lg p-6 bg-white bg-opacity-80">
           <p className="text-sm text-justify">
-            Berdasarkan analisis spasial, terlihat bahwa sebagian Pulau Panaitan terkena <span className="text-red-500 font-bold">abrasi</span> dan bisa saja berpotensi hilang setelah beberapa puluh tahun setelahnya. Berdasarkan hasil analisis menggunakan <b>Citra Satelit</b> dan <b>QGIS</b> pada tahun <b>2018</b> sampai <b>2023</b> terjadi <span className="text-red-500 font-bold">abrasi</span> dengan luas sekitar <span className="text-red-500 font-bold">2265271.573236327 m²</span> atau <span className="text-red-500 font-bold">2.27 km²</span>. Wilayah yang terkena <span className="text-red-500 font-bold">abrasi</span> cenderung mempunyai wilayah mangrove rendah, vegetasi yang kurang rapat, tanah yang terlalu lembap dan suhu lebih rendah.
+            Berdasarkan analisis spasial tahun 2018 dan 2023, terlihat bahwa beberapa titik wilayah pesisir Pulau Panaitan terindikasi
+             Pulau Panaitan terkena <span className="text-red-500 font-bold">abrasi</span>. 
+             Berdasarkan hasil analisis menggunakan <b>Citra Satelit</b> dan <b>QGIS</b> pada tahun <b>2018</b> sampai <b>2023</b> terjadi <span className="text-red-500 font-bold">abrasi</span>
+              dengan estimasi luas sekitar <span className="text-red-500 font-bold">2.04 km²</span>. Wilayah yang terkena <span className="text-red-500 font-bold">abrasi</span> cenderung mengalami penurunan kerapatan wilayah mangrove, 
+              dan kerapatan vegetasi yang semakin menurun, kondisi matahari yang cukup menyinari sehingga suhu permukaan cenderung panas (bukan ekstrem)
+              dapat mengsehatkan vegetasi sehingga dapat menahan abrasi.
           </p>
         </div>
       </motion.div>

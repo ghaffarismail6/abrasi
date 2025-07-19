@@ -81,20 +81,16 @@ const Slide5ke2 = () => {
           <p className="text-gray-0 leading-relaxed text-justify">
             Berdasarkan hasil analisis spasial dari citra satelit, adanya
             indikasi abrasi dari tahun ke tahun. Walau hanya 5 tahun abrasi di
-            Pulau Panaitan lebih dari 2 km<sup>2</sup>. Hal ini menjadi
-            kekhawatiran ketika beberapa tahun mendatang dapat berkemungkinan
-            menenggelamkan keseluruhan Pulau Panaitan jika tidak ditindaklajuti
-            oleh masyarakat sekitar, pengelola wisata Ujung Kulon ataupun
-            pemerintah seperti nasibnya 2 pulau di Pandeglang, Banten yaitu
-            Pulau Karang Gundul dan Pulau Waton yang tenggelam karena abrasi.
-            Analisis dilakukan dengan grid 20x20 meter untuk mencari fitur yang
-            mempengaruhi wilayah rawan abrasi tersebut. Dengan model terbaik
-            Random Forest didapat akurasi sebesar 83,02% dengan semua fitur signifkan karena lebib dari 20%. Fitur paling
-            signifikan atau penting adalah NDVI Vegetasi rapat di Pulau Panaitan, yang didukung oleh hutan lindung, 
-            berperan penting dalam meredam gelombang, menjaga kelembaban tanah, mengurangi dampak angin, 
-            serta menstabilkan dan menambah sedimen, sehingga membantu melindungi area dari abrasi, Pemerintah dan
-            pengelola wisata perlu mengambil langkah untuk menyelamatkan Pulau
-            Panaitan tersebut dengan beberapa langkah di bawah.
+            Pulau Panaitan lebih dari 2 km<sup>2</sup>. Hasilnya menunjukkan wilayah yang terindikasi abrasi cenderung mengalami penurunan
+             vegetasi hijau seperti hutan dan penurunan mangrove. Penyebabnya seperti penebangan hutan, 
+             pembuatan akses jalan dan lainnya. Namun, kelembapan/kondisi tanah kurang begitu signifikan terhadap abrasi 
+             dibandingkan variabel lainnya. Vegetasi berperan penting dalam meredam gelombang, dan menahan sedimen. 
+             Terdapat hubungan positif antara suhu permukaan dan vegetasi artinya semakin meningkat suhu 
+             (namun bukan kondisi ekstrem), semakin tinggi kerapatan vegetasi, kemungkinan karena fotosintesis meningkat 
+             saat siang hari, menjadikan tumbuhan menjadi lebih subur dan sehat. Kebijakan lockdown yang terjadi pada 
+             rentang tahun penelitian turut memberikan efek menurunkan suhu ekstrem malam hari karena penurunan aktivitas
+              dan emisi. Suhu permukaan menjadi indikator abrasi yang penting karena mencerminkan perubahan iklim. 
+            Pelestarian vegetasi penting untuk mencegah abrasi dan menjaga keseimbangan ekosistem.
           </p>
         </div>
       </motion.div>

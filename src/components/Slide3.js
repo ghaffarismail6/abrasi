@@ -125,14 +125,15 @@ const Slide3 = () => {
 
         <div className="mt-6">
           <p className="text-gray-700 mt-2 leading-relaxed text-justify">
-            Abrasi menyebabkan hilangnya tanah dan pergeseran garis pantai.
-            Menurut Pemerintah Banten, tahun 2015 sebanyak 2 pulau di Banten
-            hilang (Pulau Karang Gundul dan Pulau Waton) akibat tidak dirawat
-            sehingga diduga abrasi. Hal ini disayangkan karena pulau merupakan
-            aset untuk pemerintah daerah. Dilakukan penelitian untuk melihat
-            apakah ada abrasi karena pergeseran garis pantai di Pulau Panaitan
-            dan melihat variabel yang mempengaruhi abrasi seperti mangrove dan
-            lainnya.
+            Abrasi menyebabkan hilangnya daratan. Menurut Pemerintah Banten tahun 2015, 
+            P. Karang Gundul dan  Waton akibat tidak dirawat dan kurangnya 
+            informasi sehingga terabrasi. Hal ini ancaman bagi P. Panaitan yang merupakan 
+            aset dan hutan lindung negara, dan diduga adanya penebangan liar, 
+            penbuatan jalan illegal dll yang memperparah abrasi. Hal ini karena 
+            kurangnya update data dan Informasi abrasi serta lokasi dalam level pulau. 
+            Sehingga penelitian untuk melihat indikasi adanya abrasi dengan memanfaatkan
+            remote sensing dan variabel yang mempengaruhinya serta sebagai saran untuk memitigasi 
+            abrasi semakin parah.
           </p>
         </div>
       </motion.div>

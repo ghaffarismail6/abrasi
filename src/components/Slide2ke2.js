@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 const SlideWithChat = () => {
-  const [messages, setMessages] = useState([
+  const [messages] = useState([
     { id: 1, text: "Liburan Yokkkk! 🥰🥰🥰", sender: "user" },
     { id: 2, text: "Ayo, ke Pulau Panaitan aja yang pasir putih kerenn", sender: "friend" },
     { id: 3, text: "Ah Iya, kemarin aku melihat videonya...", sender: "user" },
@@ -15,6 +15,8 @@ const SlideWithChat = () => {
   ]);
 
   const [isMicOn, setIsMicOn] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
+  const iframeRef = useRef(null);
 
   const toggleMic = () => {
     setIsMicOn((prev) => !prev);
@@ -35,12 +37,28 @@ const SlideWithChat = () => {
     window.speechSynthesis.speak(utterance);
   };
 
+  const toggleMute = () => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    iframe.contentWindow.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: isMuted ? "unMute" : "mute",
+        args: [],
+      }),
+      "*"
+    );
+
+    setIsMuted((prev) => !prev);
+  };
+
   return (
     <div
       className="relative grid grid-cols-2 gap-4 h-[100vh] items-start px-8 bg-gray-100"
       style={{ backgroundImage: "url('/img/2_2.jpeg')" }}
     >
-      {/* Tombol Mic di Halaman */}
+      {/* Tombol Mic */}
       <button
         className="absolute top-4 left-10 bg-white text-pink-500 p-1 rounded-full shadow-lg text-lg hover:bg-gray-100 transition"
         onClick={toggleMic}
@@ -50,37 +68,31 @@ const SlideWithChat = () => {
 
       {/* Video Section */}
       <div className="flex flex-col items-center fade-in">
-        <div
-          className="ml-20 mt-20 relative w-[600px] h-[400px] overflow-hidden rounded-lg border-4 border-gray-300 shadow-lg"
-        >
+        <div className="ml-20 mt-20 relative w-[600px] h-[400px] overflow-hidden rounded-lg border-4 border-gray-300 shadow-lg">
           <iframe
+            ref={iframeRef}
             className="w-full h-full"
-            src="https://www.youtube.com/embed/VSJyw_6h-ew?autoplay=1&mute=1"
+            src="https://www.youtube.com/embed/VSJyw_6h-ew?autoplay=1&mute=1&enablejsapi=1"
             title="YouTube video"
             frameBorder="0"
             allow="autoplay; encrypted-media"
             allowFullScreen
           ></iframe>
-          <div
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-transparent to-gray-900 opacity-30 animate-pulse"
-          ></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-transparent to-gray-900 opacity-30 animate-pulse"></div>
         </div>
-        <div className="ml-20 mt-10 w-full flex justify-center items-center">
-          <button className="p-2 bg-gray-300 rounded-full hover:bg-gray-400 transition-transform transform hover:scale-110">
-            ◀
-          </button>
-          <input
-            type="range"
-            className="mx-4 w-3/4 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-          />
-          <button className="p-2 bg-gray-300 rounded-full hover:bg-gray-400 transition-transform transform hover:scale-110">
-            ▶
+
+        <div className="ml-20 mt-6 flex gap-4">
+          <button
+            onClick={toggleMute}
+            className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-transform transform hover:scale-110"
+          >
+            {isMuted ? "Unmute 🔇" : "Mute 🔊"}
           </button>
         </div>
       </div>
 
       {/* Chat Section */}
-      <div className=" ml-20 mt-20 relative w-full max-w-md mx-auto bg-[#d2f8c8] rounded-lg shadow-lg overflow-hidden fade-in">
+      <div className="ml-20 mt-20 relative w-full max-w-md mx-auto bg-[#d2f8c8] rounded-lg shadow-lg overflow-hidden fade-in">
         <div className="relative bg-[#075e54] text-white h-16 flex items-center px-4">
           <span className="font-bold text-base">
             [Panaitan] Potensi Besar Destinasi Banten Hilang?

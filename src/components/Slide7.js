@@ -44,9 +44,9 @@ const Slide7 = () => {
       icon: "\uD83C\uDF10", // Replace with a suitable icon
     },
     {
-      title: "Pemeliharaan Terumbu Karang",
+      title: "Aturan Tegas dan Tindak Tegas Aktifitas ilegal",
       description:
-        "Terumbu karang membantu mengurangi energi gelombang laut, melindungi garis pantai dari abrasi, dan mendukung ekosistem laut. Pemeliharaan dan restorasi menjadi langkah penting untuk menjaga perannya.",
+        "Masih banyak aktifitas illegal di Pulau Panaitan, contohnya penebangan liar, pembuatan jalan untuk menangkap burung, madu dll. Sehingga perlu langkah tegas dari pemerintah untuk mengurangi aktgifitas tersebut dan menemukan solusi terbaik dengan masyrakat sekitar.",
       icon: "\uD83C\uDF0A", // Replace with a suitable icon
     },
     {

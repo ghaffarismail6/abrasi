@@ -153,7 +153,7 @@ const Hero = () => {
             `,
           }}
         >
-          Panaitan:
+          Panaitan Warning!!:
         </span>
         <br />
         Ancaman Hilangnya Pulau <br />

@@ -13,7 +13,7 @@ const Slide5 = () => {
     datasets: [
       {
         label: "Nilai Indikator", // Label untuk grafik
-        data: [ 0.28909990799784246, 0.2756028661777333, 0.22692614470436606, 0.20837108112005825], // Sumbu X (nilai indikator)
+        data: [ 0.5304155568926703, 0.21305062209189726, 0.1540454357358096, 0.10248838527962278], // Sumbu X (nilai indikator)
         backgroundColor: "rgba(255, 99, 132, 0.5)", // Warna batang
         borderColor: "rgba(255, 99, 132, 1)",
         borderWidth: 1,
@@ -56,14 +56,14 @@ const Slide5 = () => {
     datasets: [
       {
         label: "Accuracy", // Label for accuracy bar
-        data: [0.7373.toFixed(3), 0.8302.toFixed(3), 0.7559.toFixed(3)], // Accuracy values for each model, rounded to 3 decimal places
+        data: [0.7422.toFixed(3), 0.8223.toFixed(3), 0.7591.toFixed(3)], // Accuracy values for each model, rounded to 3 decimal places
         backgroundColor: "rgba(54, 162, 235, 0.5)", // Color for accuracy bars
         borderColor: "rgba(54, 162, 235, 1)",
         borderWidth: 1,
       },
       {
         label: "F1-Score", // Label for F1-score bar
-        data: [0.74.toFixed(3), 0.83.toFixed(3), 0.76.toFixed(3)], // F1-score values for each model, rounded to 3 decimal places
+        data: [0.74.toFixed(3), 0.82.toFixed(3), 0.77.toFixed(3)], // F1-score values for each model, rounded to 3 decimal places
         backgroundColor: "rgba(255, 99, 132, 0.5)", // Color for F1-score bars
         borderColor: "rgba(255, 99, 132, 1)",
         borderWidth: 1,
@@ -176,9 +176,8 @@ const Slide5 = () => {
           </div>
           <div className="ml-4 flex-1">
             <h3 className="text-sm font-bold text-orange-600">Berdasarkan berbandingan nilai Akurasi dan F1-Score dari SVM, Reg. Log, dan Random Forest, model Terbaik adalah Random Forest sebesar</h3>
-            <p className="text-2xl font-bold text-orange-600 mt-2">83,02%</p>
-            <p className="text-sm text-orange-500 mt-1">Dengan parameter max_depth=18, max_features='log2', min_samples_leaf=9,
-            min_samples_split=5, n_estimators=96, random_state=42, random_state=42</p>
+            <p className="text-2xl font-bold text-orange-600 mt-2">82,23%</p>
+            
           </div>
           <div>
             <i className="fas fa-info-circle text-orange-400 text-lg"></i>
@@ -200,13 +199,14 @@ const Slide5 = () => {
           <div className="ml-4 flex-1">
             <h3 className="text-lg font-bold text-orange-600">Limitasi Penelitian</h3>
             <p className="text-sm text-orange-500 mt-1 text-left">1. Akurasi masih bisa ditingkatkan lagi.</p>
-            <p className="text-sm text-orange-500 mt-1 text-left">2. Machine Learning hanya menggunakan 3 metode, bisa digunakan yang lain, seperti XGBoost agar menemukan metode yang terbaik dengan akurasi uji yang terbaik.</p>
+            <p className="text-sm text-orange-500 mt-1 text-left">2. Machine Learning hanya menggunakan 3 metode.</p>
           </div>
           <div>
             <i className="fas fa-info-circle text-orange-400 text-lg"></i>
           </div>
         </motion.div>
       </div>
+
     </section>
   );
 };
